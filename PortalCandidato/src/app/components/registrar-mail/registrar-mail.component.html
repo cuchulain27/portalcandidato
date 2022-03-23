@@ -1,0 +1,6 @@
+<div class="mb-3">
+  <input  type="email" required [ngModelOptions]="{standalone: true}"  [(ngModel)]="LoginEMail.Correo" type="text"
+        autocomplete="off" class="form-control"  placeholder="Ingrese su correo">
+
+  <input class="btn btn-outline-danger rounded-pill mt-2 float-end" (click)="autorizarLogueo()" value="ingresar" type="button">
+</div>

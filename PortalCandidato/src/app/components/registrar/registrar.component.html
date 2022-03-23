@@ -1,0 +1,29 @@
+
+<form  class="w-100" (ngSubmit)="iniciarSesion()" *ngIf="!respuesta.status">
+     <div class="content">
+      <img src="../../../assets/email.png" >
+     </div>
+
+    <h2>bienvenido</h2>
+    <p> Ingresa tu rut para poder ingresar nuevo correo</p>
+    <br>
+
+    <div class="form-group mb-3">
+
+        <input #run type="text" required [ngModelOptions]="{standalone: true}" (ngModelChange)="run.value=onChangeRun($event)" [(ngModel)]="loginEmail.RutCandidato"
+         autocomplete="off" class="form-control"  placeholder="Ingrese su Rut">
+
+      </div>
+
+
+    <div class="inputBox">
+        <button type="reset" class="btn">Limpiar</button>
+        <button type="submit" class="btn">Ingresar</button>
+    </div>
+    <br>
+    <br>
+
+</form>
+
+
+<app-registrar-mail [LoginEMail]="loginEmail" [respuesta]="respuesta" *ngIf="respuesta.status" class=" align-self-center w-100"></app-registrar-mail>

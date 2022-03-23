@@ -1,0 +1,27 @@
+<form [formGroup]="signin" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"  formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+    </div>
+
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"  formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+      <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+      <div *ngIf="f.confirmPassword.errors.mustMatch">Password and confirm not match</div>
+    </div>
+  </mat-form-field>
+
+
+<div class="form-group">
+  <button class="btn btn-primary">Register</button>
+</div>
+
+
+  </form>

@@ -1,0 +1,24 @@
+.borde {
+    border: 1px solid rgb(143, 135, 135)!important;
+    border-width: thin;
+     border-color: #4e4848;
+    font-family: Lato;
+    border-radius: 3px;
+  }
+
+  th{
+    background-color: #4e4848;
+    color: aliceblue;
+  }
+
+  .texto{
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .titulo{
+    background-color: #4e4848;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+  }

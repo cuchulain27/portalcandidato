@@ -1,0 +1,29 @@
+.personal_note{
+    max-width: 1000;
+    margin: 10px auto;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+
+.exportar{
+    
+   
+    width: 50%;
+}
+
+.imagen{
+    width: 50%;
+    background-size: contain;
+    padding: 60px 60px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .botones{
+     padding-left: 20px;
+     padding-bottom: 10px;
+ }

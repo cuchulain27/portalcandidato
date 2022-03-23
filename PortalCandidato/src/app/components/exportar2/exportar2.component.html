@@ -1,0 +1,69 @@
+<h1 style="padding-left: 15px;">Exporta Aqui tu material</h1>
+<br>
+
+<div class="personal_note">
+
+    <div  class="exportar">
+          <p>Perfil</p>
+       <select id="inputState" class="form-select" [(ngModel)]="perfilModel.id">
+            <option value="" selected>Todas</option>
+           <option value="{{perfil.id}}" *ngFor="let perfil of listPerfiles">{{perfil.descripcionPerfil}}</option>
+        </select>
+        <br>
+           <p>Faena</p>
+       <select id="inputStateFaena" class="form-select" [(ngModel)]="faenaModel.id">
+        <option value="" selected>Todas</option>
+             <option value="{{faena.id}}" *ngFor="let faena of listFaenas">{{faena.descripcion}}</option>
+        </select>
+
+        <br>
+
+
+    </div>
+
+
+
+    <div class="imagen">
+        <img src="../../../assets/img/evaluar-conocimientos-laborales.png" alt="matthew hall web designer">
+
+    </div>
+
+
+</div>
+
+
+<div class="botones">
+    <button id="btnExportar" (click)="onBtnBuscar()" class="btn btn-outline-secondary" style="margin-right: 10px;" >
+        Buscar
+        <i class="fas fa-search"></i>
+    </button>
+
+
+    <!-- visibility: hidden; -->
+    <div style=" margin: auto; width: 100%; visibility: hidden; ">
+      <table id="excel-table" class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Perfil</th>
+            <th>LLave Brecha</th>
+            <th>Brecha</th>
+            <th>Trabajador</th>
+          </tr>
+
+        </thead>
+
+
+        <tr *ngFor="let item of resultadoExportar">
+          <td>{{item.perfil}}</td>
+          <td>{{item.llaveBrecha}}</td>
+          <td>{{item.brecha}}</td>
+          <td>{{item.trabajador}}</td>
+
+        </tr>
+      </table>
+    </div>
+
+
+
+
+</div>
